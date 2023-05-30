@@ -1,0 +1,9 @@
+Playlist WPU - Javascript Lanjutan (Advance Javascript)
+
+#1 Javascript Lanjutan - 1.1 Object
+
+Membuat Object Pada Javascript
+> Object Literal
+> Function Declaration
+> Constructor Function (keyword new)
+> Object.create()
