@@ -68,3 +68,56 @@ Sebenernya constructor function itu sudah memiliki parent yaitu prototype.
 2 Fase pada Execution Context (saat program dijalankan)
 1. Fase Creation
 2. Fase Execution
+
+
+
+
+
+#5 JavaScript Lanjutan - 2.2 Closure
+
+Apa itu Closuere ?? 
+"Closure merupakan kombinasi antara function dan lingkungan leksikal (lexical scope) di dalam function tersebut".
+-MDN
+
+"Closure adalah sebuah function ketika memiliki akses ke parent scope-nya, meskipun parent scope-nya sudah selesai dieksekusi."
+-W3School
+
+Lexical Scope
+
+    function init () {  
+        let nama = "Izuchii";           // local variabel
+
+        function tampilNama() {         // inner function (closure)
+            console.log(nama);          // akses ke parent variabel
+        }
+        tampilNama();
+    }
+    init();
+
+Alasan menggunakan Closure ?
+Untuk membuat Function Factories,
+Untuk membuat private method,
+
+
+
+
+
+#6 JavaScript Lanjutan - 3.1 Arrow Function
+
+Function Exspression
+    let tampilPesan = function (nama) {
+        alert ('halo' + nama);
+    }
+
+    tampilPesan("Izuchii");
+
+Arrow Function, "Bentuk lain yang lebih ringkas dari Function Exspression."
+
+    let tampilPesan = (nama) => {
+        alert('halo'+ nama);
+    }
+
+    tampilPesan("Izuchii");
+
+
+Map : memetakkn sebuah function ke dalam array
