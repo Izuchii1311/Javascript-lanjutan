@@ -65,3 +65,7 @@ function Mahasiswa(nama, energy) {
 }
 
 let Izuchii = new Mahasiswa('Izuchii', 10);
+
+
+// Izuchii.makan(2)
+// Izuchii.main(2)

@@ -7,3 +7,48 @@ Membuat Object Pada Javascript
 > Function Declaration
 > Constructor Function (keyword new)
 > Object.create()
+
+
+
+
+
+#2 Javascript Lanjutan - 1.2 Object
+
+Object.create()
+
+Contoh Kasus : 
+                const methodMahasiswa = {
+                    makan: function(porsi) {
+                        this.energy = this.energy + porsi;
+                        console.log(`Selamat Makan ${this.nama}!\nEnergy kamu meningkat sebesar ${porsi}%`);
+                    },
+                    main: function(jam){
+                        this.energy = this.energy - jam;
+                        console.log(`Selamat Bermain ${this.nama}!\nEnergy kamu akan berkurang sebesar ${jam}%`);
+                    },
+                    tidur: function(jam){
+                        this.energy = this.energy * jam;
+                        console.log(`Selamat Tidur ${this.nama}!\nEnergy kamu akan bertambah sebesar ${jam}%`);
+                    }
+                };
+
+                function Mahasiswa(nama, energy) {
+                    // Memanggil parentnya yang berisi method
+                    let mahasiswa = Object.create(methodMahasiswa);
+                    mahasiswa.nama = nama;
+                    mahasiswa.energy = energy;
+
+                    return mahasiswa;
+                }
+
+                // intansiasi
+                // **Saat melakukan instansiasi 2 method diatas akan tetap dibuat baik dipakai atau tidaknya.
+                // **Butuhnya Mahasiswa, Namun ini membuat 2 object 
+                let Izuchii = Mahasiswa('Izuchii', 10)
+                let Luthfi = Mahasiswa('Luthfi Nur Ramadhan', 10)
+
+
+
+
+
+#3 
