@@ -51,10 +51,20 @@ Contoh Kasus :
 
 
 
-#3 Prototype
+#3 JavaScript Lanjutan - Prototype
 
 Object.create() = itu seperti memanggil class lain yang dijadikan sebagai parentnya.
 jika menggunakan construct function maka sebenarnya sudah secara otomatis memanggil Object.create()
 let this = Object.create(Mahasiswa.prototype);
 
 Sebenernya constructor function itu sudah memiliki parent yaitu prototype.
+
+
+
+
+
+#4 JavaScript Lanjutan - 2.1 Execution Context, Hoisting & Scope
+
+2 Fase pada Execution Context (saat program dijalankan)
+1. Fase Creation
+2. Fase Execution
