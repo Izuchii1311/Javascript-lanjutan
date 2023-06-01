@@ -51,4 +51,10 @@ Contoh Kasus :
 
 
 
-#3 
+#3 Prototype
+
+Object.create() = itu seperti memanggil class lain yang dijadikan sebagai parentnya.
+jika menggunakan construct function maka sebenarnya sudah secara otomatis memanggil Object.create()
+let this = Object.create(Mahasiswa.prototype);
+
+Sebenernya constructor function itu sudah memiliki parent yaitu prototype.
