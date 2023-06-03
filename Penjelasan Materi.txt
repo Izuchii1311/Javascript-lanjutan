@@ -121,3 +121,46 @@ Arrow Function, "Bentuk lain yang lebih ringkas dari Function Exspression."
 
 
 Map : memetakkn sebuah function ke dalam array
+
+
+
+
+
+#7 JavaScript Lanjutan - 3.2 this pada Arrow Function
+(this_arrow_function.js & style.css)
+
+Konteks this di dalam function exspression dan this di dalam arrow function itu berbeda.
+Arrow Function tidak memiliki this, maka jika diberi keyword this namun tidak ada keyword this di lingkup scopenya maka akan terus mencari sampai ke window, dan jika tetap tidak ada akan bernilai undefined.
+
+
+
+
+
+# Quick Tip (Var, Let, Const)
+
+var = keyword di Javascript untuk membuat variabel. (masih menganut function scope)
+let = keyword di JavaScript untuk membuat variabel. (sudah menganut block scope)
+const = jika nilainya akan tetep dan tidak akan berubah gunakan const. (sudah menganut block scope)
+kenapa ada const ?? 
+= untuk meminimalisir perubahan state (kembali ke keadaan awal).
+
+Hoisting = (Seperti Menaikkan Bendera / menaikan benda keatas).
+
+BlockScope vs. Function Scope
+JavaScript itu Function Scope
+
+
+IIFE atau SIAF
+Immediately Invoked Function Exspression (IIFE), function exspression yang dipanggil langsung ketika dibuat.
+Dibuat supaya kita menjaga agar variabel yang ada di dalam function tidak bisa diakses dari luar.
+
+Contoh Cara Lama dengan cara baru cukup for biasa menggunakan let: 
+(fuction() {
+    for(var i = 0; i = 10; i++) {
+        console.log(i);
+    }
+}());
+console.log(i)
+
+i tidak akan bisa mengakses function
+
